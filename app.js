@@ -34,6 +34,7 @@ function page1func(op){
     document.getElementById("time3").style = "display:none !important";
     document.getElementById("hold").style = "display:none !important";
     document.getElementById("confirm").style = "display:none !important";
+    document.getElementById("close").style = "display:none !important";
 
     var menu1 = document.getElementById("menu1");
     menu1.style = "position: absolute;top: 368px;left: 8px;height: 39px;background: transparent;width: 320px;border-radius: 2%;border: 1px solid transparent;";
@@ -49,6 +50,7 @@ function page1func(op){
 };
 
 function page2func(op){
+    var select = 0;
     document.getElementById("menu1").style = "display:none !important";
     document.getElementById("menu2").style = "display:none !important";
     document.getElementById("menu3").style = "display:none !important";
@@ -62,31 +64,43 @@ function page2func(op){
 
     var btn1 = document.getElementById("btn1");
     btn1.style = "position: absolute;top: 264px;left: 64px;height: 27px;background: transparent;width: 93px;border-radius: 2%;border: 1px solid transparent;";
+    btn1.onclick = function(){select=1;};
 
     var btn2 = document.getElementById("btn2");
     btn2.style = "position: absolute;top: 296px;left: 64px;height: 27px;background: transparent;width: 93px;border-radius: 2%;border: 1px solid transparent;";
+    btn2.onclick = function(){select=1;};
 
     var btn3 = document.getElementById("btn3");
     btn3.style = "position: absolute;top: 329px;left: 64px;height: 27px;background: transparent;width: 93px;border-radius: 2%;border: 1px solid transparent;";
+    btn3.onclick = function(){select=1;};
 
     var btn4 = document.getElementById("btn4");
     btn4.style = "position: absolute;top: 361px;left: 64px;height: 27px;background: transparent;width: 93px;border-radius: 2%;border: 1px solid transparent;";
+    btn4.onclick = function(){select=1;};
 
     var btn5 = document.getElementById("btn5");
     btn5.style = "position: absolute;top: 264px;left: 181px;height: 27px;background: transparent;width: 93px;border-radius: 2%;border: 1px solid transparent;";
+    btn5.onclick = function(){select=1;};
 
     var btn6 = document.getElementById("btn6");
     btn6.style = "position: absolute;top: 296px;left: 181px;height: 27px;background: transparent;width: 93px;border-radius: 2%;border: 1px solid transparent;";
+    btn6.onclick = function(){select=1;};
 
     var btn7 = document.getElementById("btn7");
     btn7.style = "position: absolute;top: 329px;left: 181px;height: 27px;background: transparent;width: 93px;border-radius: 2%;border: 1px solid transparent;";
+    btn7.onclick = function(){select=1;};
 
     var btn8 = document.getElementById("btn8");
     btn8.style = "position: absolute;top: 361px;left: 181px;height: 27px;background: transparent;width: 93px;border-radius: 2%;border: 1px solid transparent;";
+    btn8.onclick = function(){select=1;};
 
     var confirm = document.getElementById("confirm");
     confirm.style = "position: absolute;top: 411px;left: 96px;height: 43px;background: transparent;width: 150px;border-radius: 2%;border: 1px solid transparent;";
-    confirm.onclick = function(){op.src=imges[0]; page1func(op);};
+    confirm.onclick = function(){if(select==1) {op.src=imges[0]; page1func(op);};};
+
+    var close = document.getElementById("close");
+    close.style = "position: absolute;top: 20px;left: 302px;height: 20px;background: transparent;width: 20px;border-radius: 50%;border: 1px solid transparent;";
+    close.onclick = function(){op.src=imges[0]; page1func(op);};
 };
 
 function page3func(op){
@@ -120,6 +134,10 @@ function page3func(op){
     var confirm = document.getElementById("confirm");
     confirm.style = "position: absolute;top: 316px;left: 73px;height: 44px;background: transparent;width: 185px;border-radius: 2%;border: 1px solid transparent;";
     confirm.onclick = function(){if (ct3==1) {op.src=imges[4]; page1func(op);};};
+
+    var close = document.getElementById("close");
+    close.style = "position: absolute;top: 111px;left: 302px;height: 20px;background: transparent;width: 20px;border-radius: 50%;border: 1px solid transparent;";
+    close.onclick = function(){op.src=imges[0]; page1func(op);};
 };
 
 function page4func(op){
@@ -154,6 +172,10 @@ function page4func(op){
     var btn5 = document.getElementById("confirm");
     btn5.style = "position: absolute;top: 320px;left: 165px;height: 40px;background: transparent;width: 140px;border-radius: 2%;border: 1px solid transparent;";
     btn5.onclick = function(){op.src=imges[0]; page1func(op);};
+
+    var close = document.getElementById("close");
+    close.style = "position: absolute;top: 112px;left: 303px;height: 20px;background: transparent;width: 20px;border-radius: 50%;border: 1px solid transparent;";
+    close.onclick = function(){op.src=imges[0]; page1func(op);};
 };
 
 // Clicking of Images
